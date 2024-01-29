@@ -1,21 +1,14 @@
 {
   "canisters": {
-    "icp_ledger_canister_backend": {
-      "main": "src/icp_ledger_canister_backend/main.mo",
-      "type": "motoko"
-    },
-    "icp_ledger_canister_frontend": {
-      "dependencies": [
-        "icp_ledger_canister_backend"
-      ],
-      "frontend": {
-        "entrypoint": "src/icp_ledger_canister_frontend/src/index.html"
-      },
-      "source": [
-        "src/icp_ledger_canister_frontend/assets",
-        "dist/icp_ledger_canister_frontend/"
-      ],
-      "type": "assets"
+    "icp_ledger_canister": {
+      "type": "custom",
+      "candid": "https://raw.githubusercontent.com/dfinity/ic/d87954601e4b22972899e9957e800406a0a6b929/rs/rosetta-api/icp_ledger/ledger.did",
+      "wasm": "https://download.dfinity.systems/ic/d87954601e4b22972899e9957e800406a0a6b929/canisters/ledger-canister.wasm.gz",
+      "remote": {
+        "id": {
+          "ic": "ryjl3-tyaaa-aaaaa-aaaba-cai"
+        }
+      }
     }
   },
   "defaults": {
